@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<uexplugins>
+    <plugin
+        className="org.zywx.wbpalmstar.plugin.uexalertview.EUExAlertView"
+        uexName="uexAlertView" >
+        <method name="open" />
+        <method name="close" />
+        <method name="openCustomProgress" />
+        <method name="customProgressPresent" />
+    </plugin>
+</uexplugins>

@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <TextView
+        android:id="@+id/plugin_uexalertview_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/plugin_uexalertview_margin"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="title"
+        android:textSize="@dimen/plugin_uexalertview_title" />
+
+    <TextView
+        android:id="@+id/plugin_uexalertview_tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/plugin_uexalertview_margin"
+        android:layout_marginLeft="@dimen/plugin_uexalertview_margin"
+        android:layout_marginRight="@dimen/plugin_uexalertview_margin"
+        android:text="实现机制:1.先自定义一个弹出框的样式:2.自己实现CustomDialog类，继承自Dialog，实现里面方法，在里面加载自定义样式的弹出框；:3.使用时，与使用Dialog一样"
+        android:textSize="@dimen/plugin_uexalertview_message" />
+
+    <!-- 分隔线 -->
+
+    <TextView
+        android:id="@+id/plugin_uexalertview_tv_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/plugin_uexalertview_divider"
+        android:background="#000000" />
+
+    <LinearLayout
+        android:id="@+id/plugin_uexalertview_layout_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+</LinearLayout>

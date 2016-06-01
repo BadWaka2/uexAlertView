@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+
+<script type="text/javascript">
+
+	//回调
+	window.uexOnload = function(type) {
+		
+		//打开弹框回调
+		uexAlertView.cbShow  = function(data) {
+			alert("------cbShow ------\n" + data);
+		}
+
+		//点击弹框按钮回调
+		uexAlertView.onItemClick = function(data) {
+			uexAlertView.close();
+			alert("------onItemClick------\n" + data);
+		}
+		
+	}
+	
+	//创建alertView对象
+	function openAlertView(){
+		var json = {
+				head:{ //(可选) 弹框标题
+	                title:"标题", //(可选)标题文字
+	                color:"#FF7F00", //(可选)标题文字颜色
+	            },
+	            message:{ //(可选)具体内容
+	                title:"string为第一个参数，也就是最右边的已知参也就是最右边的已知参\n[1].也就是最右边的已知参也就是最右边的已知参也就是最右边的已知参.也就是最右边的已知参也就是最右边的已知参也就是最右边的已知参也就是最右边的已知参.空", //(可选)内容文字
+	                color:"#8B1A1A",//(可选)文字颜色
+	            },
+	            button:[ //(可选)按钮数组，每个字典是一个按钮
+	                {
+	                   title:"按钮1",//(可选)按钮文字
+	                   color:"#FF4040",//(可选)按钮文字颜色
+	                },
+	                {
+	                   title:"按钮2",//(可选)按钮文字
+	                   color:"#EEEE00",//(可选)按钮文字颜色
+	                },
+	                {
+	                   title:"按钮3",//(可选)按钮文字
+	                   color:"#CD8500",//(可选)按钮文字颜色
+	                },
+	                {
+			               title:"按钮4",//(可选)按钮文字
+			               color:"#76EE00",//(可选)按钮文字颜色
+			        },
+			        {
+			               title:"按钮5",//(可选)按钮文字
+			               color:"#76EE00",//(可选)按钮文字颜色
+			        }
+	            ]
+		};
+		uexAlertView.open(JSON.stringify(json));
+	}
+	
+	//打开进度条弹框
+	function openCustomProgress(){
+		var json = {
+				title:"一个安静的美男子",
+		        titleColor:"#000000",
+		        progressViewColor:"#f58220",
+		        progressTitleColor:"#DC143C"
+		};
+		uexAlertView.openCustomProgress(JSON.stringify(json));
+		customProgressPresent();
+	}
+	
+	//设置进度条百分比
+	function customProgressPresent(){
+		var json = {
+				num:"80"
+		};
+		uexAlertView.customProgressPresent(JSON.stringify(json));
+	}
+	
+	
+</script>
+</head>
+
+<body>
+	<div class="tit">uexAlertView</div>
+	<div class="conbor">
+		<div class="consj">
+		
+			<span>open</span>
+			<input class="btn" type="button" value="创建alertView对象" onclick="openAlertView()" /><br /> <br />
+		
+			<span>close</span>
+			<input class="btn" type="button" value="关闭alertView弹框" onclick="uexAlertView.close()" /><br /> <br />
+				
+			<span>openCustomProgress</span>
+			<input class="btn" type="button" value="打开进度条弹框" onclick="openCustomProgress()" /><br /> <br />
+				
+			<span>customProgressPresent</span>
+			<input class="btn" type="button" value="设置进度条百分比" onclick="customProgressPresent()" /><br /> <br />
+							
+		</div>
+	</div>
+</body>
+</html>
