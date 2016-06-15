@@ -55,6 +55,17 @@ public class EUExAlertView extends EUExBase {
 	}
 
 	/**
+	 * 回调给前端一个JSON对象
+	 * 
+	 * @param cbMethodName
+	 * @param jsonString
+	 */
+	public void cb2FrontJSONObject(String cbMethodName, String jsonString) {
+		String js = SCRIPT_HEADER + "if(" + cbMethodName + "){" + cbMethodName + "(" + jsonString + SCRIPT_TAIL;
+		onCallback(js);
+	}
+
+	/**
 	 * 创建alertView对象
 	 * 
 	 * @param params
@@ -159,7 +170,7 @@ public class EUExAlertView extends EUExBase {
 
 		AlertViewBean bean = JSONParseUtil.parseJsonOpenAlertView(jsonStr);
 
-		mDialog = new Dialog(mContext, android.R.style.Theme_Holo_Light_Dialog_NoActionBar_MinWidth);
+		mDialog = new Dialog(mContext, android.R.style.Theme_Holo_Light_Dialog_NoActionBar);
 		View view = View.inflate(mContext, EUExUtil.getResLayoutID("plugin_uexalertview_normal_dialog"), null);
 
 		// 标题
@@ -211,7 +222,7 @@ public class EUExAlertView extends EUExBase {
 						e.printStackTrace();
 						MLog.getIns().e(e);
 					}
-					cb2Front(JsConstant.CB_ON_ITEM_CLICK, jsonObject.toString());
+					cb2FrontJSONObject(JsConstant.CB_ON_ITEM_CLICK, jsonObject.toString());
 				}
 			});
 			layoutButtons.addView(btnView);

@@ -24,6 +24,7 @@
         android:layout_marginBottom="@dimen/plugin_uexalertview_margin"
         android:layout_marginLeft="@dimen/plugin_uexalertview_margin"
         android:layout_marginRight="@dimen/plugin_uexalertview_margin"
+        android:gravity="center"
         android:text="实现机制:1.先自定义一个弹出框的样式:2.自己实现CustomDialog类，继承自Dialog，实现里面方法，在里面加载自定义样式的弹出框；:3.使用时，与使用Dialog一样"
         android:textSize="@dimen/plugin_uexalertview_message" />
 
@@ -33,7 +34,7 @@
         android:id="@+id/plugin_uexalertview_tv_divider"
         android:layout_width="match_parent"
         android:layout_height="@dimen/plugin_uexalertview_divider"
-        android:background="#000000" />
+        android:background="#CCCCCC" />
 
     <LinearLayout
         android:id="@+id/plugin_uexalertview_layout_buttons"

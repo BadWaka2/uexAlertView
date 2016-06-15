@@ -19,7 +19,7 @@
 		//点击弹框按钮回调
 		uexAlertView.onItemClick = function(data) {
 			uexAlertView.close();
-			alert("------onItemClick------\n" + data);
+			alert("------onItemClick------\n" + JSON.stringify(data));
 		}
 		
 	}
@@ -32,7 +32,7 @@
 	                color:"#FF7F00", //(可选)标题文字颜色
 	            },
 	            message:{ //(可选)具体内容
-	                title:"string为第一个参数，也就是最右边的已知参也就是最右边的已知参\n[1].也就是最右边的已知参也就是最右边的已知参也就是最右边的已知参.也就是最右边的已知参也就是最右边的已知参也就是最右边的已知参也就是最右边的已知参.空", //(可选)内容文字
+	                title:"st", //(可选)内容文字
 	                color:"#8B1A1A",//(可选)文字颜色
 	            },
 	            button:[ //(可选)按钮数组，每个字典是一个按钮
@@ -48,14 +48,6 @@
 	                   title:"按钮3",//(可选)按钮文字
 	                   color:"#CD8500",//(可选)按钮文字颜色
 	                },
-	                {
-			               title:"按钮4",//(可选)按钮文字
-			               color:"#76EE00",//(可选)按钮文字颜色
-			        },
-			        {
-			               title:"按钮5",//(可选)按钮文字
-			               color:"#76EE00",//(可选)按钮文字颜色
-			        }
 	            ]
 		};
 		uexAlertView.open(JSON.stringify(json));
