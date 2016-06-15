@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <uexplugins>
     <plugin
-        uexName="uexAlertView" version="3.0.4" build="4">
-        <info>4.使用圆角对话框</info>
+        uexName="uexAlertView" version="3.0.5" build="5">
+        <info>5.点击按钮后自动关闭对话框；自定义对话框边距，调窄边距</info>
+        <build>4.使用圆角对话框</build>
         <build>3.使用固定宽度的对话框</build>
         <build>2:修复白色未占满整个弹出框的问题
               2.1:修复分割线颜色不对的问题

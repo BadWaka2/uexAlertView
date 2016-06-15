@@ -86,7 +86,7 @@
 
 
     <!-- 对话框样式 -->
-    <style name="plugin_uexalertview_dialog_style" parent="@android:style/Theme.Holo.Dialog.NoActionBar.MinWidth">
+    <style name="plugin_uexalertview_dialog_style" parent="@android:style/Theme.Holo.Dialog.NoActionBar">
 
         <!-- 背景透明 -->
         <item name="android:windowBackground">@color/plugin_uexalertview_transparent_color</item>

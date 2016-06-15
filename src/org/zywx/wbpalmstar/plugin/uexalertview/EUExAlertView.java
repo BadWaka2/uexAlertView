@@ -5,6 +5,7 @@ import org.json.JSONObject;
 import org.zywx.wbpalmstar.engine.EBrowserView;
 import org.zywx.wbpalmstar.engine.universalex.EUExBase;
 import org.zywx.wbpalmstar.engine.universalex.EUExUtil;
+import org.zywx.wbpalmstar.plugin.uexalertview.utils.DeviceUtil;
 import org.zywx.wbpalmstar.plugin.uexalertview.utils.FormatAmendUtil;
 import org.zywx.wbpalmstar.plugin.uexalertview.bean.AlertViewBean;
 import org.zywx.wbpalmstar.plugin.uexalertview.progressbar.HorizontalProgressBarWithNumber;
@@ -223,11 +224,15 @@ public class EUExAlertView extends EUExBase {
 						MLog.getIns().e(e);
 					}
 					cb2FrontJSONObject(JsConstant.CB_ON_ITEM_CLICK, jsonObject.toString());
+					if (mDialog != null) {
+						mDialog.cancel();
+						mDialog = null;
+					}
 				}
 			});
 			layoutButtons.addView(btnView);
 		}
-		mDialog.addContentView(view, new FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT, Gravity.CENTER));
+		mDialog.addContentView(view, new FrameLayout.LayoutParams(DeviceUtil.getDeviceWidth(mContext) * 5 / 6, LayoutParams.MATCH_PARENT, Gravity.CENTER));
 		mDialog.show();
 		mDialogType = DIALOG_TYPE_NORMAL;
 
