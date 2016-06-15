@@ -170,7 +170,7 @@ public class EUExAlertView extends EUExBase {
 
 		AlertViewBean bean = JSONParseUtil.parseJsonOpenAlertView(jsonStr);
 
-		mDialog = new Dialog(mContext, android.R.style.Theme_Holo_Light_Dialog_NoActionBar);
+		mDialog = new Dialog(mContext, EUExUtil.getResStyleID("plugin_uexalertview_dialog_style"));
 		View view = View.inflate(mContext, EUExUtil.getResLayoutID("plugin_uexalertview_normal_dialog"), null);
 
 		// 标题
@@ -227,7 +227,7 @@ public class EUExAlertView extends EUExBase {
 			});
 			layoutButtons.addView(btnView);
 		}
-		mDialog.addContentView(view, new FrameLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT, Gravity.CENTER));
+		mDialog.addContentView(view, new FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT, Gravity.CENTER));
 		mDialog.show();
 		mDialogType = DIALOG_TYPE_NORMAL;
 
@@ -292,7 +292,7 @@ public class EUExAlertView extends EUExBase {
 		MLog.getIns().i("progressViewColor = " + progressViewColor);
 		MLog.getIns().i("progressTitleColor = " + progressTitleColor);
 
-		mDialog = new Dialog(mContext, android.R.style.Theme_Holo_Light_Dialog_NoActionBar_MinWidth);
+		mDialog = new Dialog(mContext, EUExUtil.getResStyleID("plugin_uexalertview_dialog_style"));
 		View view = View.inflate(mContext, EUExUtil.getResLayoutID("plugin_uexalertview_progress_dialog"), null);
 
 		// 标题
@@ -322,7 +322,7 @@ public class EUExAlertView extends EUExBase {
 		}
 		tvProgress.setTextColor(Color.parseColor(progressTitleColor));
 
-		mDialog.addContentView(view, new FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT, Gravity.CENTER));
+		mDialog.addContentView(view, new FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT, Gravity.CENTER));
 		mDialog.show();
 		mDialogType = DIALOG_TYPE_PROGRESS;
 

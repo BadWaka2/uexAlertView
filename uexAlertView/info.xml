@@ -1,10 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <uexplugins>
     <plugin
-        uexName="uexAlertView" version="3.0.2" build="2">
-        <info>2:修复白色未占满整个弹出框的问题
+        uexName="uexAlertView" version="3.0.4" build="4">
+        <info>4.使用圆角对话框</info>
+        <build>3.使用固定宽度的对话框</build>
+        <build>2:修复白色未占满整个弹出框的问题
               2.1:修复分割线颜色不对的问题
-              2.2:修复onItemClick返回JSON字符串的问题</info>
+              2.2:修复onItemClick返回JSON字符串的问题</build>
         <build>1:修复由于资源文件缺失导致的打包失败问题</build>
         <build>0:uexAlertView插件</build>
     </plugin>

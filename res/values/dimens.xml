@@ -12,6 +12,7 @@
     <!-- dp -->
     <dimen name="plugin_uexalertview_margin">16dp</dimen>
     <dimen name="plugin_uexalertview_divider">1dp</dimen>
+    <dimen name="plugin_uexalertview_corners">8dp</dimen>
     <!-- 字号 -->
     <dimen name="plugin_uexalertview_title">20sp</dimen>
     <dimen name="plugin_uexalertview_message">14sp</dimen>
